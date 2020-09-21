@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasatiempos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <div class="container" style="margin-left: 40%; margin-top: 50px;">
+    <div id = "app"  style="font-size: 30px;"> {{ message }}</div>
+    <script> var app = new Vue({ el: '#app', data: { message: "Pasatiempos" } }) </script>
+    <div id="exercise" style="margin-top:50px;">
+        <p>Tu pasatiempo es: {{ name }}</p>
+      <div>
+        <input v-model="name">
+    </div>
+    </div>
+    <script>
+      var app2=new Vue({
+        el: '#exercise',
+        data: {
+            name: ''
+        }
+    });
+    </script>
+
+  <div id="hide" style="margin-top: 100px;">
+    <button class="btn btn-primary" v-on:click="isHidden = !isHidden">Descubre un pasatiempo</button>
+
+    <p v-if="isHidden">Uno de mis pasatiempos es tocar piano</p>
+  </div>
+  <div style="margin-top: 100px;">
+    <h2> Más Hobbies </h2>
+    <ul id="more">
+      <li v-for="item in items" :key="item.message">
+        {{ item.message }}
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#hide',
+      data: {
+        isHidden: false
+      }
+    })
+  </script>
+  <script>
+      var more = new Vue({
+      el: '#more',
+      data: {
+        items: [
+          { message: 'Leer' },
+          { message: 'Platicar' },
+          { message: 'Ver Series/Películas' },
+          { message: 'Jugar tennis' },
+          { message: 'Jugar soccer' }
+        ]
+      }
+    })
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
