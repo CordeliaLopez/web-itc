@@ -10,6 +10,12 @@
   <title>4295</title>
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -81,11 +87,46 @@
 </div>
 <a class="anchor" id=Skills></a>
 <h2> Skills</h2>
-<ul class="list-group">
-  <li class="list-group-item">Skill 1</li>
-  <li class="list-group-item">Skill 2</li>
-  <li class="list-group-item">Skill 3</li>
+<h4> Programming Languages</h4>
+<ul id="lang">
+  <li v-for="item in items" :key="item.message">
+    {{ item.message }}
+  </li>
 </ul>
+<h4> Technologies</h4>
+<ul id="tech">
+  <li v-for="item in items" :key="item.message">
+    {{ item.message }}
+  </li>
+</ul>
+  <script>
+      var more = new Vue({
+      el: '#lang',
+      data: {
+        items: [
+          { message: 'C++' },
+          { message: 'C' },
+          { message: 'Python' },
+          { message: 'Swift' },
+          { message: 'Typescript' },
+          { message: 'Javascript' }
+        ]
+      }
+    })
+    var tech = new Vue({
+    el: '#tech',
+    data: {
+      items: [
+        { message: 'SQL' },
+        { message: 'Angular' },
+        { message: 'HTML/CSS' },
+        { message: 'Xcode' },
+        { message: 'Tableau' },
+        { message: 'Gsuite' }
+      ]
+    }
+  })
+  </script>
   </div>
 </body>
 </html>
