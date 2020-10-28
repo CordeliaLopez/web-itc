@@ -11,8 +11,7 @@ app.use(require("cors")());
 app.use(require("body-parser").json());
 
 
-const uri = "mongodb://corde_lopez:cc5QJbUCEKamxtg@clustercv-shard-00-00.k7xhz.mongodb.net:27017,clustercv-shard-00-01.k7xhz.mongodb.net:27017,clustercv-shard-00-02.k7xhz.mongodb.net:27017/cvdb?ssl=true&replicaSet=atlas-iawxo9-shard-0&authSource=admin&retryWrites=true&w=majority"; // put your URI HERE
-
+const uri = "mongodb://corde_lopez:<password>@clustercv-shard-00-00.k7xhz.mongodb.net:27017,clustercv-shard-00-01.k7xhz.mongodb.net:27017,clustercv-shard-00-02.k7xhz.mongodb.net:27017/<database>?ssl=true&replicaSet=atlas-iawxo9-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 mongodb.MongoClient.connect(uri, (err, db) => {
   var dbo = db.db("cvdb");
