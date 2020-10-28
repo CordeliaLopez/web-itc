@@ -3,3 +3,24 @@ a.anchor {
     position: relative;
     top: -50px;
 }
+#abt {
+  align-self: center;
+}
+
+#Name{
+  margin-top: 100px;
+  background-color: #78D1D1;
+  height: 200px;
+}
+body{
+  background-color: #D4F7F7;
+}
+
+img {
+  align:right;
+}
+
+h2{
+  color: #007794;
+  font-family: sans-serif;
+}

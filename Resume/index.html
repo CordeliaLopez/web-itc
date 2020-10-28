@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>4295</title>
 </head>
-<body>
+<body onload="myFunction()">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://npmcdn.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -30,75 +28,113 @@
       </ul>
     </div>
   </nav>
-  <div class="jumbotron text-center">
-  <h1>Cordelia Lopez Lopez</h1>
+  <div class="jumbotron text-center" id="Name">
+  <h1>Cordelia López López</h1>
 
 </div>
   <div class = "container">
     <a class="anchor" id=About></a>
     <h2> About </h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="col-sm-10" id="abt"></div>
+    <div class="col-sm-2">
+      <img src ="me.PNG" width="200" height="200" class="right">
+    </div>
     <a class="anchor" id=Contact></a>
     <h2> Contact </h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div id="ct"></div>
+    <button class="btn btn-primary" onclick="myFunction()"> Send Message </button>
+<section class="mb-4" id="formDiv">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Send Message</h2>
+    <p class="text-center w-responsive mx-auto mb-5">Feel free to reach out!</p>
+    <div class="row">
+        <div class="mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="alert('Message Sent')">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+    </div>
+
+</section>
+<br>
+<br>
     <a class="anchor" id=Education></a>
     <h2> Education</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div id="edu"></div>
+    <br>
+    <br>
     <a class="anchor" id=WorkExperience></a>
     <h2> Work Experience </h2>
-    <div class="row">
-    <div class="col-sm-4">
-      <h3>Experience 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Experience 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Experience 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+    <div class="row" id = "wk"></div>
+    <br>
+    <br>
   <a class="anchor" id=MajorProjects></a>
   <h2> Major Projects </h2>
-  <div class="row">
-  <div class="col-sm-4">
-    <h3>Project 1</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-  </div>
-  <div class="col-sm-4">
-    <h3>Project 2</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-  </div>
-  <div class="col-sm-4">
-    <h3>Project 3</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-  </div>
+  <div class="row" id ="pj">
 </div>
 <a class="anchor" id=Skills></a>
 <h2> Skills</h2>
+<div class="col-sm-6">
 <h4> Programming Languages</h4>
 <ul id="lang">
   <li v-for="item in items" :key="item.message">
     {{ item.message }}
   </li>
 </ul>
+</div>
+<div class="col-sm-6">
 <h4> Technologies</h4>
 <ul id="tech">
   <li v-for="item in items" :key="item.message">
     {{ item.message }}
   </li>
 </ul>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("formDiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
   <script>
       var more = new Vue({
       el: '#lang',
@@ -126,6 +162,77 @@
       ]
     }
   })
+  </script>
+  <script>
+        $.get("/about", function (data) {
+          console.log("Data:"+data)
+          console.log(data[0].about)
+          var abt = $("#abt");
+        if (data.length > 0) {
+          data.forEach((item, index) => {
+            abt.append("<p>"+item.about+"</p>");
+           });
+        }
+      });
+      $.get("/contact", function (data) {
+        console.log("Data:"+data)
+        console.log(data[0].email)
+        var ct = $("#ct");
+      if (data.length > 0) {
+        data.forEach((item, index) => {
+          ct.append("<b>Email:</b> <p>"+item.email+"</p>");
+          ct.append("<b>Phone:</b> <p>"+item.phone+"</p>");
+          ct.append("<b>Linkedin:</b> <p>"+item.linkedin+"</p>");
+        });
+      }
+    });
+    $.get("/education", function (data) {
+      console.log("Data:"+data)
+      console.log(data[0].school)
+      var edu = $("#edu");
+    if (data.length > 0) {
+      data.forEach((item, index) => {
+        edu.append("<b>"+item.school+"</b>");
+        edu.append("<p>"+item.degree+"</p>");
+        edu.append("<i>"+item.grad+"</i>");
+        edu.append("<p> GPA "+item.gpa+"</p>");
+
+
+      });
+    }
+  });
+
+  $.get("/work", function (data) {
+    console.log("Data:"+data)
+    console.log(data[0].company)
+    var wk = $("#wk");
+  if (data.length > 0) {
+    data.forEach((item, index) => {
+      wk.append(`<div class="col-sm-4">
+                  <h3> ${item.company} </h3>
+                  <b>${item.position}</b><br>
+                  <i>${item.dates}</i>
+                  <p>${item.place}</p>
+                  <p>${item.description}</p>
+                  </div>`);
+    });
+  }
+});
+$.get("/projects", function (data) {
+  console.log("Data:"+data)
+  console.log(data[0].title)
+  var pj = $("#pj");
+if (data.length > 0) {
+  data.forEach((item, index) => {
+    pj.append(`<div class="col-sm-6">
+                <h3> ${item.title} </h3>
+                <b>${item.dev}</b><br>
+                <i>${item.dates}</i>
+                <p>${item.description}</p>
+                </div>`);
+  });
+}
+});
   </script>
   </div>
 </body>
